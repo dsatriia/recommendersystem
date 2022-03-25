@@ -1,0 +1,8 @@
+Panduan dalam Edit CV 
+-Pada baris pertama kolom pertama : Nama kolom yaitu cv_desc tidak perlu diubah
+-Pada baris kedua kolom pertama : Isikan Excperience Section yaitu 
+				  Isikan Education Section yaitu
+				  Isikan Skill Section yaitu 
+-Setelah itu save 
+-Upload CV pada menu Rekomendasi setelah memilih iklan pekerjaan untuk mendapatkan
+ hasil rekomendasi pekerjaan yang sesuai dengan CV Anda
