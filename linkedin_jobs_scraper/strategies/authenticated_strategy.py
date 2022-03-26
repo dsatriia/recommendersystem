@@ -338,10 +338,11 @@ class AuthenticatedStrategy(Strategy):
 #                         let el2 = el.children[1].children[2].children[0];
                         '''
                             const el = document.querySelector(arguments[0]);
-                            let el2 = el.children[1].children[2].children[0];
+                            let el2 = el.children[1].children[2].children[0].children[1].children[1];
+
 
                             return [
-                                el2.innerText,
+                                el2.innerText.split("·")[0],
                                 el2.outerHTML    
                             ];
                         ''',
