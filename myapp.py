@@ -309,7 +309,7 @@ def main():
 								print("[ON_END]")
 
 							scraper = LinkedinScraper(
-								chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
+								chrome_executable_path="chromedriver",
 								chrome_options=None,  
 								headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 								max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
@@ -496,7 +496,7 @@ def main():
 									print("[ON_END]")
 
 								scraper = LinkedinScraper(
-									chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
+									chrome_executable_path="chromedriver",
 									chrome_options=None,  
 									headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 									max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
@@ -1248,7 +1248,7 @@ def main():
 									print("[ON_END]")
 
 								scraper = LinkedinScraper(
-									chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
+									chrome_executable_path="chromedriver",
 									chrome_options=None,  
 									headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 									max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
@@ -1433,7 +1433,7 @@ def main():
 										print("[ON_END]")
 
 									scraper = LinkedinScraper(
-										chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
+										chrome_executable_path="chromedriver",
 										chrome_options=None,  
 										headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 										max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
