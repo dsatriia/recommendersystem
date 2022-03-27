@@ -309,7 +309,7 @@ def main():
 								print("[ON_END]")
 
 							scraper = LinkedinScraper(
-								chrome_executable_path="chromedriver",
+								chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
 								chrome_options=None,  
 								headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 								max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
@@ -496,7 +496,7 @@ def main():
 									print("[ON_END]")
 
 								scraper = LinkedinScraper(
-									chrome_executable_path="chromedriver",
+									chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
 									chrome_options=None,  
 									headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 									max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
@@ -529,33 +529,37 @@ def main():
 							except:
 								results = "Not Found"
 							
-						job_data = pd.DataFrame(
-							{
-								"Job_ID": id,
-								"Date": post_date,
-								"Company Name": company_name,							
-								"Total Employees": total_employees,
-								"Actively Recruiting": actively_recruiting,
-								"Job_Title": post_title,
-								"Location": job_location,
-								"Description": job_des,
-								"Link": link,
-							}
-						)
+						# if id length > 0
+						if len(id) > 0:
+							job_data = pd.DataFrame(
+								{
+									"Job_ID": id,
+									"Date": post_date,
+									"Company Name": company_name,							
+									"Total Employees": total_employees,
+									"Actively Recruiting": actively_recruiting,
+									"Job_Title": post_title,
+									"Location": job_location,
+									"Description": job_des,
+									"Link": link,
+								}
+							)
 
-						# cleaning description column
-						job_data["Description"] = job_data[
-							"Description"
-						].str.replace("\n", " ")
+							# cleaning description column
+							job_data["Description"] = job_data[
+								"Description"
+							].str.replace("\n", " ")
 
-						# print(job_data.info())
-						st.subheader("Data Hasil Scrap")
-						# job_data.head()
-						job_data.to_csv(
-							"datascraptest.csv", index=0, encoding="utf-8"
-						)
-						dframe = load_data("datascraptest.csv")
-						st.dataframe(dframe.head(10))
+							# print(job_data.info())
+							st.subheader("Data Hasil Scrap")
+							# job_data.head()
+							job_data.to_csv(
+								"datascraptest.csv", index=0, encoding="utf-8"
+							)
+							dframe = load_data("datascraptest.csv")
+							st.dataframe(dframe.head(10))
+						else :
+							st.error("Job not found.")
 				else:
 					st.error("Please update the ad first.")
 					
@@ -1244,7 +1248,7 @@ def main():
 									print("[ON_END]")
 
 								scraper = LinkedinScraper(
-									chrome_executable_path="chromedriver",
+									chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
 									chrome_options=None,  
 									headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 									max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
@@ -1429,7 +1433,7 @@ def main():
 										print("[ON_END]")
 
 									scraper = LinkedinScraper(
-										chrome_executable_path="chromedriver",
+										chrome_executable_path="/Users/dimassatria/Documents/Koding/Python/recommendersystem/chromedriver",
 										chrome_options=None,  
 										headless=True,  #headless :memilih mode headless browser, tanpa menampilkan proses saat ambil data
 										max_workers=1, #berapa banyak bagian kecil dari program yang akan muncul untuk menjalankan kueri (satu driver Chrome untuk setiap bagian kecil dari program
